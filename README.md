@@ -49,11 +49,6 @@ The game uses CSS Grid Layout for the game board and responsive design technique
 - **Game Controller Module**: Controls the game logic, including turns, win conditions, and game reset.
 - **Display Controller Module**: Updates the game board and message display.
 
-## Sounds
-
-- **Click Sound (`click.mp3`)**: Played when a cell is clicked.
-- **Victory Sound (`win.mp3`)**: Played when a player wins.
-- **Draw Sound (`draw.mp3`)**: Played when the game ends in a draw.
 
 ## Dependencies
 
@@ -66,12 +61,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgements
 
 - The project is inspired by the classic Tic-Tac-Toe game.
-- Special thanks to resources and tutorials that helped with JavaScript and CSS.
+- Special thanks to the Odin project tutorials and othe resources that helped with the project.
 
-## Contact
 
-For any questions or feedback, please contact [your-email@example.com](mailto:your-email@example.com).
 
-```
-
-Replace `<repository-url>` with the actual URL of your repository, and `[your-email@example.com](mailto:your-email@example.com)` with your email address. If you have any additional information or specific instructions, feel free to modify the README accordingly.
