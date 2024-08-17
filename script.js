@@ -48,6 +48,18 @@ const GameController = (function() {
     [2, 4, 6]
   ];
 
+  // Load sound files
+  const clickSound = new Audio('sounds/click.mp3');
+  const endSound = new Audio('sounds/end.mp3');
+
+  const playClickSound = () => {
+    clickSound.play();
+  };
+
+  const playEndSound = () => {
+    endSound.play();
+  };
+
   const startGame = () => {
     running = true;
     currentPlayer = playerX;
@@ -59,12 +71,15 @@ const GameController = (function() {
     if (!running || !Gameboard.updateBoard(index, currentPlayer.marker)) {
       return;
     }
+    playClickSound(); // Play sound on cell click
     DisplayController.renderBoard();
     if (checkWinner()) {
       DisplayController.updateMessage(`${currentPlayer.name} wins!`);
+      playEndSound(); // Play sound when a player wins
       running = false;
     } else if (Gameboard.getBoard().every(cell => cell !== "")) {
       DisplayController.updateMessage(`It's a draw!`);
+      playEndSound(); // Play sound on draw
       running = false;
     } else {
       currentPlayer = currentPlayer === playerX ? playerO : playerX;
