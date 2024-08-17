@@ -1,0 +1,121 @@
+/* General Styling */
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-container {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px 30px 20px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#statsText {
+  color: #333;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+/* Cell and Grid Styling */
+#cell-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Use 1fr for equal distribution */
+  width: 225px; /* Initial size */
+  margin: auto;
+  gap: 0; /* Remove gaps between cells */
+}
+
+.cell {
+  width: 75px; /* Adjusted for larger size */
+  height: 75px;
+  background-color: #ffeb3b; /* Light yellow background */
+  border: 2px solid #333;
+  box-shadow: 0 0 0 2px #333;
+  line-height: 75px;
+  font-size: 2.5em;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for cells */
+.cell:hover {
+  background-color: #ffd700;
+}
+
+/* X and O colors */
+.cell.X {
+  color: #f44336; /* Red color for X */
+}
+
+.cell.O {
+  color: #2196f3; /* Blue color for O */
+}
+
+/* Restart Button */
+#restartBtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 20px;
+}
+
+#restartBtn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  #cell-container {
+    width: 400px; /* Adjusted size for medium screens */
+  }
+
+  .cell {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1024px) {
+  #cell-container {
+    width: 450px; /* Adjusted size for large screens */
+    padding: 25px;
+  }
+
+  .cell {
+    width: 150px;
+    height: 150px;
+    line-height: 200px;
+    font-size: 3.5em;
+  }
+  
+  h1{
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+#statsText{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+}
